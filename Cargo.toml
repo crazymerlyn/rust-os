@@ -1,0 +1,32 @@
+[package]
+authors = ["CrazyMerlyn <crazy.d.merlyn@gmail.com>"]
+name = "myos"
+version = "0.1.0"
+
+[dependencies]
+bit_field = "0.7.0"
+bitflags = "0.8.2"
+multiboot2 = "0.3.2"
+once = "0.3.2"
+rlibc = "1.0.0"
+spin = "0.4.5"
+volatile = "0.2.3"
+x86_64 = "0.1.2"
+
+[dependencies.hole_list_allocator]
+path = "./libs/hole_list_allocator"
+
+[dependencies.lazy_static]
+features = ["spin_no_std"]
+version = "0.2.6"
+
+[lib]
+crate-type = ["staticlib"]
+
+[profile]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
