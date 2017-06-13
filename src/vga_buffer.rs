@@ -78,7 +78,7 @@ impl Writer {
     }
 
     pub fn buffer(&mut self) -> &mut Buffer {
-        unsafe { self.buffer.get_mut() }
+        unsafe { self.buffer.as_mut() }
     }
 
     fn new_line(&mut self) {

@@ -46,6 +46,8 @@ pub extern "C" fn rust_main(multiboot_info_addr: usize) {
         stack_overflow();
     }
 
+    let a = 0/0;
+
     stack_overflow();
 
     x86_64::instructions::interrupts::int3();
