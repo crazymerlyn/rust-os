@@ -1,5 +1,5 @@
 #![feature(lang_items, const_fn)]
-#![feature(alloc, collections)]
+#![feature(alloc)]
 #![feature(unique)]
 #![feature(abi_x86_interrupt)]
 #![no_std]
@@ -11,7 +11,6 @@ extern crate multiboot2;
 extern crate x86_64;
 extern crate hole_list_allocator;
 extern crate alloc;
-extern crate collections;
 extern crate bit_field;
 
 #[macro_use]
